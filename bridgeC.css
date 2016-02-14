@@ -4,7 +4,7 @@
 h1{font-family: 'BukhariScript', cursive; color: #ed764f;}
 h2 {font-family: 'Futura', sans-serif; color: #3db6b8;}
 h3{font-family: 'BukhariScript', cursive; color: #ed764f;}
-p {font-family: 'Futura', sans-serif; color: #3db6b8;}
+p {font-family: 'Futura', sans-serif; color: #3db6b8; font-size: 0.9rem;}
 a {font-family: 'Futura', sans-serif; color: #0f4855; text-decoration: none;}
 li{font-family: 'Futura', sans-serif; color: #3db6b8}
 ul {list-style-type: none;}
@@ -12,16 +12,16 @@ div{border-radius: 10px;}
 
 
 /*Header*/
-	/*toggle menue*/
+	/*toggle menu*/
 	label{font-family: 'Futura', sans-serif; color: #ed764f;} 
-	li.menu {text-align: center; text-decoration: none;}
-	div.menu {display: inline-block; width:50%%; margin: auto ;  }
+	li.t_menu {text-align: center; text-decoration: none;}
+	div.t_menu {display: inline-block; width:50%; margin: auto ;  }
 
 	#menu-toggle { display: none;} /* hides the checkbox */ 
 
-	#menu {display: none; } /*hides menu items*/
+	#t_menu {display: none; } /*hides menu items*/
 
-	#menu-toggle:checked + #menu {
+	#menu-toggle:checked + #t_menu{
 	  display: inline-table;
 	  float: center;
 	  padding: 10px ;
@@ -38,20 +38,30 @@ div{border-radius: 10px;}
 	#logoheader{width: 80%;}
 	#header{text-align: center; margin: 20px 20%}
 
+	/*Main Menu*/
+	#m_menu{display: none;}
 
 /*Body*/
+	#web_cont{display: none;}
 	body {background-color: #0f4855; }
 
 	div.info {
-		padding: 0.5% 5%;
+		padding: 0.5% 7%;
 		margin: 2%;
 		display: inline-block;
 		float: center;
 		border: solid #ed764f;
 		border-radius: 20px;
 	}
+	#who_we_are{margin-top: 20px;}
+
+	/*decoration blocks*/
+	#martin_quote{display: none;}
+	#explore_imagine_lead {display: none;}
 
 	/*navigational buttons*/
+	#nav_button_web{display: none;}
+
 	a.nav_button {color: #0f4855}
 	div.nav_button {
 		display: inline-block;
@@ -64,4 +74,165 @@ div{border-radius: 10px;}
 
 	div.right {float: right;}
 	div.left {float: left;}
+
+/*Tablet Media Quiry*/
+
+@media screen and (min-width: 443px) {
+	body{background-color: #ffffff}
+	#web_cont{display: block;}
+
+	/*Menu*/
+
+		label{display: none;}
+		#m_menu{
+			display: block; 
+			background-color: #0f4855; 
+			border-radius: 10px;
+			text-align: center;
+			padding: 10px;
+		}
+		menuitem.m_menu{ padding: 8px;} 
+
+		a.menu{color: #ed764f; font-size: 0.79rem;}
+
+	/*Side Menu*/
+		#nav_button_mobile{display: none;}
+		#nav_button_web{
+			background-color: #eff8fa; 
+			display: inline-block; 
+			width: 47%;
+			float: left;
+			padding: 4% 0;
+			}
+
+		div.nav_button{display: block;
+			width: 80%;
+			margin: 4% auto;
+			padding: 7px;
+			
+		
+		}
+		div.right {float: center;}
+		div.left {float: center;}
+
+	/*decoration Boxes*/
+	#decoration_blocks
+	{	display: inline-block;
+		width: 43%;
+		float: center;
+		margin-left: 2%
+	
+
+	}
+
+		#martin_quote{
+			display: inline-block;
+			float: left; 
+			text-align: center;
+			width: 97%;
+			padding: 3px 8px;
+			border: solid #ed764f;
+			border-radius: 15px;
+			background-color: #eff8fa;
+			margin-bottom: 10px;
+		}
+			span.quote_author{
+				float: right;
+				margin-right:10px;}
+
+			h5.quote {font-family: 'BukhariScript', cursive; color: #3db6b8;
+				font-weight: lighter;
+			}
+			h5.quote_author {color: #ed764f}
+
+
+		#explore_imagine_lead {
+			display: inline-block;
+			float: left;
+			width: 100%;
+			padding: 0px 0px;
+			text-align: center;
+
+		}
+			img.filler_image{width: 100%; height: 100%;
+			border: solid #3db6b8;
+			border-radius: 0px;
+			border-width: thick;}
+
+	/*Info Boxs */
+
+		div.info{ 
+			display: inline-block; 
+			width: 40%;
+			background-color: #0f4855;
+			padding: 0.4% 1%;
+			margin: auto;
+		}
+		
+		#who_we_are{float: left; margin-right: 1%; margin-top: 0; padding: 15px;}
+		#mission{float: center; margin-left: 1%; padding: 15px;}
+		
+		}
+
+		#info_block{
+			display: block;
+			background-color: #0f4855;
+			border: none;
+			border-radius: 0;
+			margin-top: 8px;
+			padding: 5%  3%;
+			padding-bottom: 20%;
+			height: auto;
+			}
+
+
+
+/*Desktop Media Quiry*/
+
+	@media screen and (min-width: 900px) {
+		label{display: none;}
+
+		#all_cont{display: block; margin: 0; padding: 0; border: none;}
+
+		#web_cont{display: inline-block; width: 60%; margin: 0.5%; float: left;}
+		/*Side Menu*/
+			#nav_button_web{
+					width: 30%;
+					}
+
+
+		/*decoration Boxes*/
+			#decoration_blocks
+			{
+				width: 65%;} 
+
+
+
+		/*Info Boxs */
+
+			#info_block{
+				display: inline-block;
+				background-color: #ffffff;
+				border: none;
+				border-radius: 0;
+				margin-top: 0;
+				padding: 0;
+				width: 35%;	
+				}
+			
+			div.info{ 	
+				width: 100%;
+				margin-top: 0;
+				padding-top: 0;
+				}
+
+			#mission {margin-top: 3%;}
+
+	}
+
+
+
+
+
+
 
